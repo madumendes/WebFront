@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const NavContainer = styled.nav`
   border-radius: 0 30px 30px 0;
@@ -26,6 +27,7 @@ const NavItem = styled.a`
   padding: 13px 26px;
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
   &:hover {
     background-color: ${props => props.active ? '#333' : '#f0f0f0'};
   }
@@ -39,7 +41,7 @@ const Navigation = () => (
   <NavContainer>
     <NavItem href="#" active>Sobre</NavItem>
     <NavItem href="#">Contato</NavItem>
-    <NavItem href="#">Orçamentos</NavItem>
+    <NavItem>Orçamentos</NavItem>
     <NavItem href="#">Logar</NavItem>
   </NavContainer>
 );
